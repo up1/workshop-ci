@@ -7,8 +7,8 @@ jobs:
       - checkout
       - run: |
            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-           docker image build -t Adisorn-watt/circle .
-           docker image push Adisorn-watt/circle
+           docker image build -t adisornwatt/circle .
+           docker image push adisornwatt/circle
 workflows:
     build-and-test:
       jobs:
