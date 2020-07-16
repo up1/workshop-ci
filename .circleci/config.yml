@@ -16,10 +16,3 @@ jobs:
                 echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
                 docker build -t toonhudsha/app:0.0.0 .
                 docker push toonhudsha/app:0.0.0
-# Orchestrate or schedule a set of jobs
-workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
-    jobs:
-      - welcome/run
