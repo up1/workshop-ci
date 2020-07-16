@@ -4,13 +4,13 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
-      - node/with-cache:
-          steps:
+      - Run
+        steps:
             - run: |
                  echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
                  docker image build -t somkiat/circle .
                  docker image push somkiat/circle
+          
 workflows:
     build-and-test:
       jobs:
