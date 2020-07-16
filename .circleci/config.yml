@@ -4,8 +4,8 @@ orbs:
   node: circleci/node@1.1.6
 jobs:
   build-and-test:
-    executor:
-      image: circleci/node:stretch
+    docker:
+      - image: circleci/node:stretch
     steps:
       - checkout
       - node/with-cache:
