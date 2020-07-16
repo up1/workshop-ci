@@ -11,14 +11,17 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
-  dockerised:
-    machine: true
+  dockerized:
     steps:
       - checkout
-      - run: echo "$DOCKER_PASS"
+      - run: |
+         TAG=0.1.$CIRCLE_BUILD_NUM
+         docker build -t $DOCKER_USER/myApp:$TAG .
+         echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+         docker push image $DOCKER_USER/myApp:$TAG
 workflows:
     build-and-test:
       jobs:
         - build-and-test
-        - dockerised
+        - dockerized
 
