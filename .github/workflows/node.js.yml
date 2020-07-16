@@ -21,20 +21,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - name: docker build
-      uses: actions/docker/cli@v1
+      uses: actions/docker/cli@master
       with:
         args: build -t nearraenn3/myrepository .
     - name: docker login
-      uses: actions/docker/login@v1
+      uses: actions/docker/login@master
       env:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     - name: docker push
-      uses: actions/docker/cli@v1
+      uses: actions/docker/cli@master
       with:
         args: nearraenn3/myrepository1
