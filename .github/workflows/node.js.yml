@@ -30,6 +30,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: phisonk/app:1.2.0
+        repository: phisonk/appci
         tag_with_ref: true
         tag_with_sha: true
