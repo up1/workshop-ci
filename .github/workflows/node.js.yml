@@ -26,6 +26,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: nearraenn3/myrepository
-        tag_with_ref: true
-        tag_with_sha: true  
+        repository: ${{github.repository}}/myrepository
+        tags: latest
