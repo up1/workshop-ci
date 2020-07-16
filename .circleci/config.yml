@@ -2,13 +2,13 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:latest
+      - image: docker:latest
     steps:
       - checkout
       - run: |
            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-           docker image build -t adisornwatt/circle .
-           docker image push adisornwatt/circle
+           docker image build -t Adisorn-watt/circle .
+           docker image push Adisorn-watt/circle
 workflows:
     build-and-test:
       jobs:
