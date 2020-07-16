@@ -12,6 +12,6 @@ jobs:
            docker image build -t adisornwatt/circle .
            docker image push adisornwatt/circle
 workflows:
-   build-and-test:
+   build:
      jobs:
        - build-and-test
