@@ -11,8 +11,8 @@ jobs:
           steps:
             - run: |
                  echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-                 docker image build -t somkiat/circle .
-                 docker image push somkiat/circle
+                 docker image build -t adisornwatt/circle .
+                 docker image push adisornwatt/circle
 workflows:
     build-and-test:
       jobs:
