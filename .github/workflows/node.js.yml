@@ -32,5 +32,6 @@ jobs:
        repository: jirapornkanh/workshop-ci
        tag_with_ref: true
        tag_with_sha: true
+       
 
     
