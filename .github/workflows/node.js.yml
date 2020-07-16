@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-
+        
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -32,6 +32,4 @@ jobs:
        repository: jirapornkanh/workshop-ci
        tag_with_ref: true
        tag_with_sha: true
-       
-
     
