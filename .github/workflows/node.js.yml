@@ -23,9 +23,9 @@ jobs:
     - run: npm install
     - name: docker login
       uses: actions/docker/login@master
-        env:
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      env:
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v1
       with:
