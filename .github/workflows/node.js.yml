@@ -25,4 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
+    - with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: bzi3oat/workshop-ci
+        tag_with_ref: true
+        tag_with_sha: true
 
