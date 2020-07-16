@@ -23,12 +23,13 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        uses: docker/build-push-action@v1 
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v1
+      with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: anthikaji/app
         tag_with_ref: true
-        tag_with_sha: true
-     
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
+        tag_with_sha: true 
