@@ -35,6 +35,6 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
     - name: docker push
-        uses: actions/docker/cli@master
-        with:
-          args: nearraenn3/myrepository1
+      uses: actions/docker/cli@master
+      with:
+        args: nearraenn3/myrepository1
