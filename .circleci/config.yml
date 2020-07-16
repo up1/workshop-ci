@@ -9,8 +9,10 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install
-            - run: npm test
+            - run: |
+                 echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+                 docker image build -t somkiat/circle .
+                 docker image push somkiat/circle
 workflows:
     build-and-test:
       jobs:
