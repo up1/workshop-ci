@@ -1,5 +1,4 @@
 #https://hub.docker.com/repository/docker/somkiat/app
-
 FROM node:12.18.2-stretch
 WORKDIR /app
 # Depenedencies/library
