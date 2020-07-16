@@ -9,5 +9,5 @@ Run project
 $npm install
 $npm start
 ```
-
-Open url=`http://loccalhost:4000`
+# CI workshop
+Open url=http://loccalhost:4000
