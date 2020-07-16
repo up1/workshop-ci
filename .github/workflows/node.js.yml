@@ -16,7 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - name: build-push-action
+    - name: Build and Push Docker Image
+
       uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
