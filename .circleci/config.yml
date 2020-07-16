@@ -11,11 +11,11 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
-    dockerised:
-      machine: true
-      steps:
-        - checkout
-        - run: echo "$DOCKER_PASS"
+  dockerised:
+    machine: true
+    steps:
+      - checkout
+      - run: echo "$DOCKER_PASS"
 workflows:
     build-and-test:
       jobs:
