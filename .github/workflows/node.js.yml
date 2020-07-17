@@ -32,10 +32,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-<<<<<<< HEAD
         repository: neeyalionessdk/democi-test
-=======
-        repository: ${{ secrets.DOCKER_USERNAME }}/demo_web
->>>>>>> 08933ea887a6b55066194423b685bda0d3381fa7
         tag_with_ref: true
         tag_with_sha: true
