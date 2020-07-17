@@ -29,5 +29,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: joker10130/demo_web
+        repository: ${{ secrets.DOCKER_USERNAME }}/demo_web
         tags: latest
