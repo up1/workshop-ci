@@ -32,4 +32,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/demo_web
         tag_with_ref: true
-        tag_with_sha: true  
+        tag_with_sha: true
